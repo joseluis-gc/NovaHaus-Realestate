@@ -1,0 +1,34 @@
+#ErrorDocument 404 /404.php
+#AddDefaultCharset UTF-8
+#Header unset ETag
+#FileETag None
+
+#Options +FollowSymLinks -MultiViews
+# Turn mod_rewrite on
+#RewriteEngine On
+#RewriteBase /realestate/
+
+#RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+index\.php\?page=([^\s&]+) [NC]
+#RewriteRule ^ index/%1? [R=301,L]
+
+#RewriteRule ^index/([^/]+)/?$ index.php?page=$1 [L,QSA]
+
+RewriteEngine On
+
+# If the file or directory exists, exit
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule .? - [END]
+
+RewriteRule ^([^/]+)/([0-9]+)$ index.php?page=$1&id=$2 [L]
+RewriteRule ^([^/]+)/([a-z0-9]+)$ index.php?page=$1&action=$2 [NC,L]
+RewriteRule ^([^/]+)$ index.php?page=$1 [L]
+
+RewriteRule ^([^/]+)/([0-9]+)$ search.php?page=$1&id=$2 [L]
+RewriteRule ^([^/]+)/([a-z0-9]+)$ search.php?page=$1&action=$2 [NC,L]
+RewriteRule ^([^/]+)$ index.php?search=$1 [L]
+
+RewriteRule ^([^/]+)/([0-9]+)$ single.php?page=$1&id=$2 [L]
+RewriteRule ^([^/]+)/([a-z0-9]+)$ single.php?page=$1&action=$2 [NC,L]
+RewriteRule ^([^/]+)$ single.php?search=$1 [L]
+
