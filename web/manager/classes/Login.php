@@ -56,7 +56,7 @@ class Login
                 $user_name = $this->db_connection->real_escape_string($_POST['user_name']);
 
                 
-                $sql = "SELECT user_id, user_name, user_email, user_password_hash, user_level, user_type 
+                $sql = "SELECT user_id, user_name, user_email, user_password_hash, user_level, user_type, user_image 
                         FROM users
                         WHERE user_name = '" . $user_name . "' OR user_email = '" . $user_name . "';";
                 $result_of_login_check = $this->db_connection->query($sql);
@@ -76,6 +76,7 @@ class Login
                         $_SESSION['user_id'] = $result_row->user_id;
                         $_SESSION['user_level'] = $result_row->user_level;
                         $_SESSION['user_type'] = $result_row->user_type;
+                        $_SESSION['user_image'] = $result_row->user_image;
 
                     } else {
                         $this->errors[] = "Wrong password. Try again.";
