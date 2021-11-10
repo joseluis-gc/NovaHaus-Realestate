@@ -1,5 +1,5 @@
 <?php
-require_once("../../manager/config/db.php");
+require_once("db.php");
 
 
 if(isset($_GET['id']))

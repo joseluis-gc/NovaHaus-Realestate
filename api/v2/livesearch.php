@@ -2,7 +2,7 @@
 
 //Including Database configuration file.
 
-require_once("../../manager/config/db.php");
+require_once("db.php");
 
 //Getting value of "search" variable from "script.js".
 
