@@ -44,12 +44,12 @@ if(isset($_POST['limit'], $_POST['start']))
 
         <div class="col s12 m4">
         <div class="card hoverable">
-            <div style='height:200px;background-image: url("http://localhost/adminsystems/realestate/manager/<?php echo $row['imagen_principal'] ?>"); background-size:cover' class="card-image">
+            <div style='height:200px;background-image: url("https://smartlaboratory.tech/novahaus/web/manager/<?php echo $row['imagen_principal'] ?>"); background-size:cover' class="card-image">
               <!--  
               <img src="http://localhost/adminsystems/realestate/manager/<?php echo $row['imagen_principal'] ?>" alt="<?php echo $row['name'] ?>">
               -->
               <span class="card-title"><?php echo $row['name'] ?></span>
-              <a class="btn-floating halfway-fab waves-effect waves-light deep-purple" href="single.php?id=<?php echo $row['id'] ?>">
+              <a class="btn-floating halfway-fab waves-effect waves-light deep-purple" href="single.html?id=<?php echo $row['id'] ?>">
                 <i class="material-icons">add</i>
               </a>
             </div>

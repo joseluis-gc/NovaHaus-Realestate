@@ -2,7 +2,7 @@ $(document).ready(function(){
     var myEl = document.getElementById('search_button');
     var search_input = "";
     var vor = "";
-    var url = "api/v1/fetch.php";
+    var url = "https://smartlaboratory.tech/novahaus/api/v2/fetch.php";
     var limit = 3;
     var start = 0;
     var action = 'inactive';
@@ -17,7 +17,7 @@ $(document).ready(function(){
         start = 0;
         $('#load_data').html("");
         $('#main_title').html("Resultados de la busqueda: "+search_input);
-        url = "api/v1/fetch.php?search="+search_input+"&vor="+vor;
+        url = "https://smartlaboratory.tech/novahaus/api/v2/fetch.php?search="+search_input+"&vor="+vor;
         //action = active;
         load_data(limit, start);
         $('html, body').animate({
@@ -142,7 +142,7 @@ function fill(Value) {
     
                 //Data will be sent to "ajax.php".
     
-                url: "api/v1/livesearch.php",
+                url: "https://smartlaboratory.tech/novahaus/api/v2/livesearch.php",
     
                 //Data, that will be sent to "ajax.php".
     

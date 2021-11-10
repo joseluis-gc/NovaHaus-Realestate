@@ -15,7 +15,7 @@ if(isset($_GET['id']))
         </div>
 
 
-        <div style='border-radius:15px; height:300px;background-image: url("http://localhost/adminsystems/realestate/manager/<?php echo $row['imagen_principal'] ?>"); background-size:cover; background-position:center center' class="card-image col s12 m12">
+        <div style='border-radius:15px; height:300px;background-image: url("https://smartlaboratory.tech/novahaus/web/manager/<?php echo $row['imagen_principal'] ?>"); background-size:cover; background-position:center center' class="card-image col s12 m12">
 
         </div>
 
@@ -153,7 +153,7 @@ if(isset($_GET['id']))
                 while($row_image = mysqli_fetch_array($run_image_query)):
                 ?>
                     <div class="col m4 s12">
-                        <div style='border-radius:5px; height:200px; width:100%; background-image: url("http://localhost/adminsystems/realestate/manager/<?php echo $row['imagen_principal'] ?>"); background-size:cover; background-position:center center'  class=" ">
+                        <div style='border-radius:5px; height:200px; width:100%; background-image: url("https://smartlaboratory.tech/novahaus/web/manager/<?php echo $row['imagen_principal'] ?>"); background-size:cover; background-position:center center'  class=" ">
                             
                         </div>
                     </div>
