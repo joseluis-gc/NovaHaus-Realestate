@@ -31,6 +31,16 @@ define("DB_NAME", "adminsystems_realestate");
 define("DB_USER", "root");
 define("DB_PASS", "");
 
+
+/***
+ * 
+ * define("DB_HOST", "localhost");
+define("DB_NAME", "smartlab_realestate");
+define("DB_USER", "smartlab_user");
+define("DB_PASS", "databaseuser1!");
+
+ */
+
 $connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
  
 if ($connection->connect_error) { 

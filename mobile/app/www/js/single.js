@@ -13,7 +13,7 @@ $(document).ready(function(){
   function load_data(){
 
       $.ajax({
-        url:"api/v1/single.php?id="+property,
+        url:"https://smartlaboratory.tech/novahaus/api/v2/single.php?id="+property,
         method:"POST",
         data:{property:property},
         cache:false,

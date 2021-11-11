@@ -4,7 +4,7 @@
       var recamaras = "";
       var tipo = "";
       var precio = "";
-      var url = "api/v1/advanced_search.php";
+      var url = "https://smartlaboratory.tech/novahaus/v2/advanced_search.php";
       var limit = 3;
       var start = 0;
       var action = 'inactive';
@@ -21,7 +21,7 @@
           start = 0;
           $('#load_data').html("");
           $('#main_title').html("Resultados de la busqueda:");
-          url = "api/v1/advanced_search.php?transaction="+vor+"&br="+recamaras+"&t="+tipo+"&p="+precio;
+          url = "https://smartlaboratory.tech/novahaus/v2/advanced_search.php?transaction="+vor+"&br="+recamaras+"&t="+tipo+"&p="+precio;
           load_data(limit, start);
           $('html, body').animate({
               scrollTop: $("#load_data").offset().top
