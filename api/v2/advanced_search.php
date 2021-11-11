@@ -59,7 +59,7 @@ if(isset($_POST['limit'], $_POST['start']))
                 <img src="http://localhost/adminsystems/realestate/manager/<?php echo $row['imagen_principal'] ?>" alt="<?php echo $row['name'] ?>">
                 -->
                 <span class="card-title"><?php echo $row['name'] ?></span>
-                <a class="btn-floating halfway-fab waves-effect waves-light deep-purple" href="single.php?id=<?php echo $row['id'] ?>">
+                <a class="btn-floating halfway-fab waves-effect waves-light deep-purple" href="single.html?id=<?php echo $row['id'] ?>">
                     <i class="material-icons">add</i>
                 </a>
                 </div>

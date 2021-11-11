@@ -9,6 +9,8 @@ header('Access-Control-Allow-Methods: GET, POST');
 
 header("Access-Control-Allow-Headers: X-Requested-With");
 
+header('Content-type: text/plain; charset=utf-8');
+
 //output buffering 
 ob_start();
 

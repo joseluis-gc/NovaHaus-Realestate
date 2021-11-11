@@ -4,7 +4,7 @@
       var recamaras = "";
       var tipo = "";
       var precio = "";
-      var url = "https://smartlaboratory.tech/novahaus/v2/advanced_search.php";
+      var url = "https://smartlaboratory.tech/novahaus/api/v2/advanced_search.php";
       var limit = 3;
       var start = 0;
       var action = 'inactive';
@@ -21,7 +21,7 @@
           start = 0;
           $('#load_data').html("");
           $('#main_title').html("Resultados de la busqueda:");
-          url = "https://smartlaboratory.tech/novahaus/v2/advanced_search.php?transaction="+vor+"&br="+recamaras+"&t="+tipo+"&p="+precio;
+          url = "https://smartlaboratory.tech/novahaus/api/v2/advanced_search.php?transaction="+vor+"&br="+recamaras+"&t="+tipo+"&p="+precio;
           load_data(limit, start);
           $('html, body').animate({
               scrollTop: $("#load_data").offset().top
@@ -42,12 +42,12 @@
                 $('#load_data').append(data);
                 if(data == '')
                 {
-                    $('#load_data_message').html("<div><button style='width:100%' class='btn deep-purple'>No Data Found</button></div>");
+                    $('#load_data_message').html("<div><button style='width:100%' class='btn deep-purple'>No hay mas propiedades</button></div>");
                     action = 'active';
                 }
                 else
                 {
-                    $('#load_data_message').html("<div><button style='width:100%' class='btn deep-purple'>Loading, Please Wait...</button></div>");
+                    $('#load_data_message').html("<div><button style='width:100%' class='btn deep-purple'>Cargando, por favor espere...</button></div>");
                     action = 'inactive';
                 }
             }

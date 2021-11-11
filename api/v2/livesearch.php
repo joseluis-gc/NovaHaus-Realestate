@@ -30,7 +30,7 @@ if (isset($_POST['search'])) {
 
    echo '
 
-<ul style="overflow-y:scroll; position:absolute;z-index:10000000; width:97%; box-shadow:0 0 20px rgb(78 78 78 / 10%)">
+<ul style="overflow-y:scroll; position:absolute;z-index:10000000; width:95%; box-shadow:0 0 20px rgb(78 78 78 / 10%); border-radius:5px; ">
 
    ';
 
@@ -46,7 +46,7 @@ if (isset($_POST['search'])) {
 
         By passing fetched result as parameter.  margin-top:-20px; margin-bottom: 20px; padding:20px; -->
 
-   <li  style="background-color: white; margin-top:-20px; margin-bottom: 10px; padding:20px; " onclick='fill("<?php echo $Result['name']; ?>")'>
+   <li  style="background-color: white; margin-top:-10px; margin-bottom: 10px; padding:20px; height:70px;border:1px solid #e5f0ee " onclick='fill("<?php echo $Result['name']; ?>")'>
 
    <a>
 

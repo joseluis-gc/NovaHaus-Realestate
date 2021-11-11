@@ -22,12 +22,12 @@ $(document).ready(function(){
             $('#load_data').append(data);
             if(data == '')
             {
-                $('#load_data_message').html("<div><button style='width:100%' class='btn deep-purple'>Data Loaded</button></div>");
+                $('#load_data_message').html("<!--<div><button style='width:100%' class='btn deep-purple'>Data Loaded</button></div>-->");
                 action = 'active';
             }
             else
             {
-                $('#load_data_message').html("<div><button style='width:100%' class='btn deep-purple'>Loading, Please Wait...</button></div>");
+                $('#load_data_message').html("<div><button style='width:100%' class='btn deep-purple'>Cargando, por favor espere...</button></div>");
                 action = 'inactive';
 
             }

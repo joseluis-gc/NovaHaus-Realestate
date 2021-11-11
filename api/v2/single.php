@@ -16,15 +16,16 @@ if(isset($_GET['id']))
         <div class="container">
             <section>
 
+
                 <div style="margin-top:10px;" class="col s12 m8">
-                <h4 class="deep-purple-text"><?php echo $row['name'] ?></h4>
-                <h5><?php echo $row['street'] . " " . $row['number'] . " " . $row['section'] ?> <br> <span class="deep-purple-text"><?php echo number_format($row['precio'],2) . " " . $row['moneda'] ; ?></span></h5>  
+                    <h4 class="deep-purple-text"><?php echo $row['name'] ?></h4>
+                    <h5><?php echo $row['street'] . " " . $row['number'] . " " . $row['section'] ?> <br> <span class="deep-purple-text"><?php echo number_format($row['precio'],2) . " " . $row['moneda'] ; ?></span></h5>  
                 </div>
 
 
 
 
-                <div class="col s12 m8 ">
+                <div class="col s12 m6 ">
                 
                     <div style="height: 80px; " class="col s3 m3 l3    ">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M13.2 7.07L10.25 11l2.25 3c.33.44.24 1.07-.2 1.4-.44.33-1.07.25-1.4-.2-1.05-1.4-2.31-3.07-3.1-4.14-.4-.53-1.2-.53-1.6 0l-4 5.33c-.49.67-.02 1.61.8 1.61h18c.82 0 1.29-.94.8-1.6l-7-9.33c-.4-.54-1.2-.54-1.6 0z"/></svg>                    
@@ -71,8 +72,8 @@ if(isset($_GET['id']))
                  
                     
 
-                    <div class="col l12">
-                        <h4 class="deep-purple-text darken-4">Descripción</h4>
+                    <div class="col 12">
+                        <h4 class="deep-purple-text darken-4">Descripcion</h4>
                         <?php echo $row['description'] ?>
                     </div>
                 
@@ -85,7 +86,7 @@ if(isset($_GET['id']))
                 </div>
 
 
-                <div  class="col s12 m4">
+                <div  class="col s12 m6">
                 
 
 
@@ -96,13 +97,13 @@ if(isset($_GET['id']))
                         </div>
                         -->
                         <div style="height:400px;" class="card-content">
-                            <span style="font-weight: 900;" class="card-title activator grey-text text-darken-4">¿Te interesa?<i class="material-icons right">more_vert</i></span>
+                            <span style="font-weight: 900;" class="card-title activator grey-text text-darken-4">Te interesa?<i class="material-icons right">more_vert</i></span>
                             <p>Deja tus datos y nosotros nos pondremos en contacto contigo.</p>
                             <br>
                             <p><a style="width: 100%;" class="activator btn white-text deep-purple" >Ingresa Tus Datos</a></p>
                             <br><br>
-                            <span style="font-weight: 900; font-size:24px;" class="card-title activator grey-text text-darken-4">¡Llamanos!</span>
-                            <p>ó tambien puedes llamarnos.</p>
+                            <span style="font-weight: 900; font-size:24px;" class="card-title activator grey-text text-darken-4">Llamanos!</span>
+                            <p>Tambien puedes llamarnos.</p>
                             <br>
                             <p><a href="tel: +526862594318" style="width: 100%;" class="btn white-text deep-purple" >Llama Ahora</a></p>
 
@@ -154,7 +155,6 @@ if(isset($_GET['id']))
                                     
                                 </div>
                             </div>
-                            <br>              
                             
 
                         <?php endwhile; ?> 
