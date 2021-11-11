@@ -45,7 +45,7 @@ while ($row = mysqli_fetch_array($result)) {
     "<a class='btn btn-secondary' href='index.php?page=details_property&id={$row['id']}'>Detalles</a>",
     "<a class='btn btn-secondary' href='index.php?page=edit_property&id={$row['id']}'>Editar</a>",
     "<a class='btn btn-secondary' href='index.php?page=delete_property&id={$row['id']}'>Borrar</a>",
-    "<a class='btn btn-secondary' href='index.php?page=gallery_property&id={$row['id']}'>Galeria</a>"
+    "<a class='btn btn-secondary' href='index.php?page=property_gallery&property_id={$row['id']}'>Galeria</a>"
   ); 
 }
 

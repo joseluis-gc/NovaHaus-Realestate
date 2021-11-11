@@ -1,6 +1,6 @@
 <?php
-require_once("classes/User.php");
-$user = new User();
+require_once("classes/Property.php");
+$user = new Property();
 
 if (isset($user)) {
     if ($user->errors) {
@@ -29,6 +29,7 @@ if (isset($user)) {
                 </ul>
               </div><!-- /.card-header -->
               <div class="card-body">
+                
               <form class="form-horizontal"  id="imageUploadForm">
 
                 <div class="tab-content">
@@ -43,7 +44,8 @@ if (isset($user)) {
                     <div style="margin-top: 15px;" class="form-group">
                       <button style="float: right;" id="uploaderBtn" type="button" class="btn btn-primary">Guardar</button>
                     </div>
-                    
+              </form>
+
                     <!-- /.post -->
 
                     <div style="margin-top:80px;" id="fileList">
@@ -54,19 +56,22 @@ if (isset($user)) {
                             $result = mysqli_query($connection, $query);
                             while($row = mysqli_fetch_array($result)):    
                             ?>
-                                <div class="col-lg-3 d-flex align-items-stretch">
+                                  <div class="col-lg-3 d-flex align-items-stretch">
+                                      <div class="card" style="width: 100%;">
+                                      <form style="width: 100% !important;" method="post">
 
-                                    <div class="card" style="width: 100%;">
-                                        <img style="height:180px" class="card-img-top" src="<?php echo substr($row['image_url'],6);?>" alt="Image">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Image</h5>
-                                            <p class="card-text">Image Options.</p>
-                                            <button class="btn btn-danger btn-block">Delete</button>
-                                        </div>
-                                    </div>
-
-
-                                </div>
+                                          <input type="hidden" name="property_id" value="<?php echo $_GET['property_id'] ?>">
+                                          <input type="hidden" name="image_id" value="<?php echo $row['image_id'] ?>">
+                                          <img style="height:180px" class="card-img-top" src="<?php echo substr($row['image_url'],6);?>" alt="Image">
+                                          <div class="card-body">
+                                              <h5 class="card-title">Image</h5>
+                                              <p class="card-text">Image Options.</p>
+                                              <button type="submit" name="delete_image" class="btn btn-danger btn-block">Delete</button>
+                                          </div>
+                                      </form>
+  
+                                      </div>
+                                  </div>
                                 
                                 
 
@@ -83,7 +88,6 @@ if (isset($user)) {
                 </div>
                 <!-- /.tab-content -->
 
-              </form>
   
               </div><!-- /.card-body -->
             </div>

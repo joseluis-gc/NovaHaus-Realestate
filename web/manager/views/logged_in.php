@@ -23,6 +23,12 @@ switch($page)
         include("pages/property/edit_property.php");
     break;
 
+    case "details_property":
+        include("pages/property/details_property.php");
+    break;
+
+
+
 
     case "create_user":
         include("pages/users/create_user.php");
