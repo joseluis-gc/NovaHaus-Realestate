@@ -19,6 +19,10 @@ switch($page)
         include("pages/property/view_property.php");
     break;
 
+    case "edit_property":
+        include("pages/property/edit_property.php");
+    break;
+
 
     case "create_user":
         include("pages/users/create_user.php");
